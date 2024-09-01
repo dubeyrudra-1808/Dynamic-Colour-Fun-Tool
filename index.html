@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="content">
+        <h1 class="title">
+          <span class="title-part line-1">Dynamic Colour Fun Tool</span>
+        </h1>
+      </div>
+    <div id="color"></div>
+    <div class="container">
+        <button id="start-btn">Start</button>
+        <button id="end-btn">End</button>
+        <button id="my-choice">Color Code</button>
+        <button id="select-color">Choose Color</button>
+        <button id="surprise">Surprise Me!</button>
+    </div>
+
+    <!-- Input container for color code -->
+    <div id="color-code-container" class="input-container" style="display: none;">
+        <input type="text" id="user-input" placeholder="Enter color code">
+        <button id="apply-color">Apply Color</button>
+    </div>
+
+    <!-- Input container for color picker -->
+    <div id="color-picker-container" class="input-container" style="display: none;">
+        <label for="color-picker">Choose a color:</label>
+        <input type="color" id="color-picker"> <br><br>        
+        <button id="apply-picker-color">Apply Color</button>
+    </div>
+
+    <div class="show">
+        <button id="copy-color">Copy Color</button>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

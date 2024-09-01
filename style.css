@@ -1,0 +1,196 @@
+/* General styling for the body */
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin: 0;
+    height: 100vh;
+    background-color: #f4f4f4; /* Light background color for contrast */
+}
+/* header style */
+.content {
+    text-align: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: bold;
+    background: linear-gradient(45deg, #ff6f61, #dce35b, #ff6f61);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    animation: gradientAnimation 5s linear infinite;
+}
+
+@keyframes gradientAnimation {
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
+}
+/* Styling for the color display div */
+#color {
+    width: 80%;
+    max-width: 400px;
+    height: 200px;
+    margin-bottom: 20px;
+    background-color: #f0f0f0;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+}
+
+/* Container styling for buttons */
+.container {
+    display: flex;
+    flex-direction: column; /* Stack buttons vertically by default */
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    width: 100%; /* Ensure container takes full width */
+    max-width: 600px; /* Set max-width to avoid stretching too much on large screens */
+}
+
+/* Button styling */
+button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%; /* Full width by default */
+    max-width: 150px; /* Max-width to maintain uniformity */
+    height: 50px; /* Fixed height for uniformity */
+    box-sizing: border-box; /* Ensures padding and border are included in the button's width */
+    text-align: center;
+}
+
+/* Button hover effect */
+button:hover {
+    background-color: #0056b3;
+    transform: scale(1.05);
+}
+
+/* Button active effect */
+button:active {
+    background-color: #004494;
+    transform: scale(0.98);
+}
+
+/* Input container styling */
+.input-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    width: 100%;
+    max-width: 400px; /* Set max-width for input containers */
+    box-sizing: border-box; /* Ensures padding and border are included in the width */
+}
+
+/* Hidden by default */
+.input-container {
+    display: none;
+}
+
+/* Styling for text and color inputs */
+input[type="text"], input[type="color"] {
+    width: 140px;
+    font-size: 12px;
+}
+
+/* Larger font size for user input */
+#user-input {
+    font-size: large;
+}
+
+/* Show class to display the color */
+.show {
+    margin-top: 20px;
+}
+
+/* Color copy button styling */
+.show button {
+    padding: 12px 24px;
+    font-size: 16px;
+    color: white;
+    background-color: #28a745;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 100%; /* Full width by default */
+    max-width: 150px; /* Max-width to maintain uniformity */
+    height: 50px; /* Fixed height for uniformity */
+    text-align: center;
+}
+
+.show button:hover {
+    background-color: #218838;
+    transform: scale(1.05);
+}
+
+.show button:active {
+    background-color: #1e7e34;
+    transform: scale(0.98);
+}
+
+/* Specific styling for 'Surprise Me!' button */
+button.random {
+    background-color: #17a2b8; /* Unique color for 'Surprise Me!' button */
+}
+
+button.random:hover {
+    background-color: #138496;
+}
+
+button.random:active {
+    background-color: #117a8b;
+}
+
+/* Responsive styling */
+@media (min-width: 576px) {
+    .container {
+        flex-direction: row; /* Stack buttons horizontally on larger screens */
+        justify-content: space-between; /* Evenly distribute buttons across the container */
+    }
+
+    button {
+        width: 150px; /* Fixed width for uniformity */
+    }
+
+    #color {
+        max-width: 400px; /* Maintain max-width for color display on larger screens */
+    }
+}
+
+@media (max-width: 576px) {
+    button {
+        font-size: 14px;
+        padding: 10px 20px;
+        width: 100%; /* Full width on smaller screens */
+    }
+
+    #color {
+        width: 100%;
+        max-width: 300px; /* Adjust max-width for smaller screens */
+        height: 150px; /* Reduce height for smaller screens */
+    }
+
+    .container {
+        flex-direction: column; /* Stack buttons vertically on small screens */
+        width: 90%; /* Slightly reduce width to fit small screens */
+    }
+
+    .input-container {
+        width: 100%;
+        max-width: 300px; /* Adjust max-width for input containers on small screens */
+    }
+}
